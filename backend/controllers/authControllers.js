@@ -48,7 +48,7 @@ catch(err) {
 
 
 const login = async(req,res) => { 
-
+console.log('trying to log user')
 const{username,password} = req.body
 if(!username || !password) { 
 
