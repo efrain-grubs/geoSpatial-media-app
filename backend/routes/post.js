@@ -5,6 +5,7 @@ const upload = require('../middleware/sendImage')
 const verifyToken = require('../middleware/verifyToken')
 
 router.post('/',verifyToken,upload.single('URL'),createPost)
+
 router.get('/',verifyToken,getPost)
 router.delete('/:id',verifyToken,deletePost)
 router.get('/all',allPost)
