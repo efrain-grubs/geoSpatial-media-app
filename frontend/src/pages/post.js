@@ -52,6 +52,7 @@ function Post() {
 
     try {
       const info = await customAxios.post('/post/', formData);
+      
       console.log('info: ', info);
       socket.emit('new-post', info.data.newPost);
     } catch (err) {

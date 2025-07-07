@@ -2,10 +2,13 @@ const express = require('express')
 const Post = require('../models/post')
 
 const createPost = async(req,res) => { 
-
+console.log('route reached')
+console.log('req body',req.body)
+console.log('req file',req.file)
 try { 
 
     const {title,description,location,postImage} = req.body
+
 const userId = req.userId
 
 console.log("userId: ",userId)
