@@ -93,7 +93,7 @@ app.use('/post',post)
 app.use('/',messaging)
 app.use('/ping',(req,res) => res.send('pong'))
 
-const PORT = process.env.PORT || 5050
+const PORT = process.env.PORT
 mongoose.connect(process.env.MONGO_URI)
 
 .then(() => server.listen(PORT,() =>console.log(`connected to port ${PORT}`)))
