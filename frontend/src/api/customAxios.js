@@ -3,7 +3,7 @@ import axios from 'axios'
 const customAxios = axios.create({
 
 withCredentials: true,
-baseURL: "http://localhost:5050"
+baseURL: "https://geospatial-media-app.onrender.com"
 
 })
 
