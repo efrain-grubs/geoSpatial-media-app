@@ -91,6 +91,7 @@ app.use('/user',user)
 app.use('/refresh',refresh)
 app.use('/post',post)
 app.use('/',messaging)
+app.use('/ping',(req,res) => res.send('pong'))
 
 const PORT = process.env.PORT || 5050
 mongoose.connect(process.env.MONGO_URI)
