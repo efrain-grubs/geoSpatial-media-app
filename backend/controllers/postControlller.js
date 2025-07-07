@@ -13,9 +13,10 @@ const userId = req.userId
 
 console.log("userId: ",userId)
     const userLocation = JSON.parse(location)
+    let URL = null
 if(req.file) { 
 
-    const URL = req.file.path
+    URL = req.file.path
 }
 
    
