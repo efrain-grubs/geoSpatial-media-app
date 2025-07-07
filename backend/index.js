@@ -14,7 +14,7 @@ const Messages = require('./models/message') // save past chat
 const io = new Server(server,{
 cors: {
 
-    origin: "http://localhost:3000",
+    origin: "https://geospatial-media-client.onrender.com",
     credentials: true,
     methods: ["POST","GET"]
 }})
@@ -78,7 +78,7 @@ socket.on('disconnect', () => {
 
 app.use(cookie())
 app.use(cors({ 
-    origin:"http://localhost:3000",
+    origin:"https://geospatial-media-client.onrender.com",
     credentials: true
 }))
 app.use(express.json())
