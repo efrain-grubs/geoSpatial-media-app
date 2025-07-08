@@ -52,11 +52,12 @@ function Post() {
 
     try {
       const info = await customAxios.post('/post/', formData);
-if(info) {
-  toast.success('upload successful')
-}
+
       console.log('info: ', info);
       socket.emit('new-post', info.data.newPost);
+      if(info) {
+        toast.success('upload successful')
+      }
     } catch (err) {
       toast.error('upload unsucessful')
       console.log('error: ', err);
