@@ -89,6 +89,7 @@ setImage(null)
         onSubmit={(e) => {
           e.preventDefault();
           sendInfo();
+          submission()
         }}
         style={{
           display: 'flex',
@@ -173,9 +174,7 @@ setImage(null)
           }}
         />
 
-        <button onClick ={() => {
-submission()
-        }}
+        <button 
           type="submit"
           style={{
             padding: '0.75rem',
