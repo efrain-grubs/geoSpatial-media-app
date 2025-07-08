@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import Webcam from 'react-webcam';
 import customAxios from '../api/customAxios';
 import socket from '../api/socket';
-
+import {toast} from 'react-hot-toast'
 function Post() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -52,13 +52,24 @@ function Post() {
 
     try {
       const info = await customAxios.post('/post/', formData);
-      
+if(info) {
+  toast.success('upload successful')
+}
       console.log('info: ', info);
       socket.emit('new-post', info.data.newPost);
     } catch (err) {
+      toast.error('upload unsucessful')
       console.log('error: ', err);
     }
   };
+
+  const submission = async() => {
+
+setDescription('')
+setTitle('')
+setImage(null)
+
+  }
 
   return (
     <div
@@ -161,7 +172,9 @@ function Post() {
           }}
         />
 
-        <button
+        <button onClick ={() => {
+submission()
+        }}
           type="submit"
           style={{
             padding: '0.75rem',

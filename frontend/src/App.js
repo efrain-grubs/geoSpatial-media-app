@@ -2,7 +2,7 @@ import React,{lazy,Suspense} from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import NavBar from './components/navBar'
 import PersonalChat from './pages/personalChats'
-
+import {Toaster} from 'react-hot-toast'
 
 const Register = React.lazy(() => import("./pages/register"))
 const Login = React.lazy(() => import("./pages/login"))
@@ -17,6 +17,7 @@ function App() {
   
   return (
     <div>
+      <Toaster position="top-right" reverseOrder={false} />
 <Suspense fallback = {<h1>Loading page...</h1>}>
 
 <BrowserRouter>
