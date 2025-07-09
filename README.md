@@ -20,9 +20,4 @@ A real-time social media app where users can post messages or images tagged with
 - **Backend:** Node.js, Express, MongoDB, Socket.IO, JWT
 - **Extras:** Cloudinary (for image uploads), Multer
 
-## ⚙️ Running Locally (for developers)
 
-1. **Clone the project**
-   ```bash
-   git clone https://github.com/efrain-grubs/geoSpatial-media-app.git
-   cd geoSpatial-media-app
