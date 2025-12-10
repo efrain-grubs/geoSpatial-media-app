@@ -4,7 +4,7 @@ A real-time social media app where users can post messages or images tagged with
 
 ## 🌍 Live Demo
 
-🔗 [Try the App](https://geospatial-media-client.onrender.com)
+
 
 ## ✨ Features
 
